@@ -80,16 +80,9 @@ WSGI_APPLICATION = 'back.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'als-project',
-        'USER': 'root',
-        'PASSWORD': 'papaya',
-        'HOST': 'localhost',
-        'PORT': '3306'
-    }
-}
+
+from .db_property import DATABASES
+DATABASES =DATABASES
 
 
 # Password validation
